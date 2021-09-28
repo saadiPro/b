@@ -1,0 +1,204 @@
+body{
+	max-height: 100vh;
+	overflow: hidden;
+}
+body>*{
+	margin: 0.5rem;
+}
+.main{
+	max-height: 65vh;
+	overflow-y: hidden;
+}
+#log{
+	max-height: 100%;
+	overflow-y: auto;
+}
+
+/***************** A Card *******************/
+.card{
+	font-size: 10em;
+	font-family: cursive, sans-serif;
+	border: 0.015em solid black;
+	border-radius: 0.5rem;
+	background-color: white;
+	display: inline-block;
+	position: relative;
+	padding: 1rem;
+	min-width: 0.7em;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+}
+.card::before,
+.card::after{
+	content: attr(data-value);
+	font-size: 0.2em;
+	position: absolute;
+	font-weight: 800;
+}
+.card::before{
+	top: 0.5em;
+	left: 0.5em;
+}
+.card::after{
+	bottom: 0.5em;
+	right: 0.5em;
+	transform: rotate(180deg);
+}
+.card.red{
+	color: red;
+}
+.card.black{
+	color: black;
+}
+
+/*********** table ***********/
+.table{
+	height: 300px;
+	padding-top: 125px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+  width: 500px;
+	max-width: 40%;
+}
+.slot{
+	position: absolute;
+	display: inline-block;
+	/* border: 2px solid black; */
+	border-radius: 0.2rem;
+	width: 80px;
+	font-size: 10px;
+	min-height: 100px;
+}
+.table .slot:nth-child(1){
+	transform: rotate(45deg) translateY(100%);
+}
+.table .slot:nth-child(2){
+	transform: rotate(135deg) translateY(100%);
+}
+.table .slot:nth-child(3){
+	transform: rotate(225deg) translateY(100%);
+}
+.table .slot:nth-child(4){
+	transform: rotate(315deg) translateY(100%);
+}
+.slot img{
+	width: 100%;
+}
+.selectCard{
+	overflow-x: auto;
+}
+/* .selectCard>.slot:nth-child(2){
+	z-index: 2;
+	transform: translateX(50%);
+}
+.selectCard>.slot:nth-child(3){
+	z-index: 3;
+	transform: translateX(100%);
+}
+.selectCard>.slot:nth-child(4){
+	z-index: 4;
+	transform: translateX(150%);
+}
+.selectCard>.slot:nth-child(5){
+	z-index: 5;
+	transform: translateX(200%);
+}
+.selectCard>.slot:nth-child(6){
+	z-index: 6;
+	transform: translateX(250%);
+}
+.selectCard>.slot:nth-child(7){
+	z-index: 7;
+	transform: translateX(300%);
+}
+.selectCard>.slot:nth-child(8){
+	z-index: 8;
+	transform: translateX(350%);
+}
+.selectCard>.slot:nth-child(9){
+	z-index: 9;
+	transform: translateX(400%);
+}
+.selectCard>.slot:nth-child(10){
+	z-index: 10;
+	transform: translateX(450%);
+}
+.selectCard>.slot:nth-child(11){
+	z-index: 11;
+	transform: translateX(500%);
+}
+.selectCard>.slot:nth-child(12){
+	z-index: 12;
+	transform: translateX(550%);
+}
+.selectCard>.slot:nth-child(13){
+	z-index: 13;
+	transform: translateX(600%);
+}
+.selectCard>.slot:nth-child(14){
+	z-index: 14;
+	transform: translateX(650%);
+}
+.selectCard>.slot:nth-child(15){
+	z-index: 15;
+	transform: translateX(700%);
+}
+.selectCard>.slot:nth-child(16){
+	z-index: 16;
+	transform: translateX(750%);
+}
+.selectCard>.slot:nth-child(17){
+	z-index: 17;
+	transform: translateX(800%);
+} */
+
+.main{
+	display: flex;
+}
+.users{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 20%;
+}
+.userUnit{
+	max-width: 200px;
+	color: white;
+	text-align: center;
+	border-radius: 1rem;
+	/* background-color: lightgreen; */
+	overflow: hidden;
+	padding: 10px;
+}
+.userUnit .imgWrapper img{
+	width: 100%;
+	border-radius: 50%;
+}
+.userUnit .imgWrapper{
+	overflow: hidden;
+	width: 50%;
+	margin: auto;
+}
+.noOfCards{
+	background-color: lightgreen;
+}
+.status{
+	background-color: lightgreen;
+}
+.name{
+	font-size: large;
+	background-color: lightgreen;
+}
+.message{
+	min-height: 50px;
+	background-color: lightgreen;
+	color: white;
+}
+
+#log{
+	background-color: rgb(238, 238, 238);
+	width: 20%;
+	overflow-y: auto;
+}
